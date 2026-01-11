@@ -12,13 +12,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Description -->
     <meta
       name="description"
       content="Explore selected work by Katherine — graphic designer specializing in branding, visual identity, print and digital design."
     />
 
-    <!-- Open Graph (Facebook, Viber, Messenger, LinkedIn) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Work — Katherine | Graphic Designer" />
     <meta
       property="og:description"
@@ -30,25 +29,10 @@
       property="og:image"
       content="https://katherine.netlify.app/assets/images/og-image.jpg"
     />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
 
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Work — Katherine | Graphic Designer" />
-    <meta
-      name="twitter:description"
-      content="Branding projects, visual identity and graphic design work by Katherine."
-    />
-    <meta
-      name="twitter:image"
-      content="https://katherine.netlify.app/assets/images/og-image.jpg"
-    />
-
-    <!-- Tailwind CDN -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind config -->
     <script>
       tailwind.config = {
         theme: {
@@ -75,7 +59,6 @@
       };
     </script>
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -84,9 +67,10 @@
     />
   </head>
 
-  <body class="bg-neutral-50 text-neutral-900 font-sans">
+  <body class="bg-neutral-950 text-white font-sans">
+    <!-- Header -->
     <header
-      class="sticky top-0 bg-white/80 backdrop-blur border-b border-neutral-200 z-50"
+      class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800 z-50"
     >
       <nav
         class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
@@ -98,30 +82,18 @@
           Katherine
         </a>
 
-        <ul class="flex gap-6 text-sm text-neutral-600">
-          <li>
-            <a href="work.html" class="hover:text-neutral-900 transition"
-              >Work</a
-            >
-          </li>
-          <li>
-            <a href="about.html" class="hover:text-neutral-900 transition"
-              >About</a
-            >
-          </li>
-          <li>
-            <a href="contact.html" class="hover:text-neutral-900 transition"
-              >Contact</a
-            >
-          </li>
+        <ul class="flex gap-6 text-sm text-neutral-400">
+          <li><a href="work.html" class="hover:text-white">Work</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Page Intro -->
+    <!-- Intro -->
     <section class="max-w-6xl mx-auto px-6 py-24 animate-fadeIn">
       <h1 class="text-3xl md:text-4xl font-semibold mb-6">Work</h1>
-      <p class="text-neutral-600 max-w-xl">
+      <p class="text-neutral-400 max-w-xl">
         A curated selection of visual work, including branding, illustration,
         print and product design projects.
       </p>
@@ -134,10 +106,9 @@
       </h2>
 
       <div class="max-w-3xl animate-fadeUp">
-        <div class="overflow-hidden rounded-2xl bg-neutral-200 mb-8">
+        <div class="overflow-hidden rounded-2xl bg-neutral-800 mb-8">
           <img
             src="assets/images/logo-main.jpg"
-            alt="Brand identity logo design for a publishing agency"
             class="w-full h-80 object-contain md:object-cover"
           />
         </div>
@@ -146,17 +117,17 @@
           Brand Identity for a Publishing Agency
         </h3>
 
-        <p class="text-neutral-700 leading-relaxed mb-4">
+        <p class="text-neutral-400 leading-relaxed mb-4">
           Visual identity project focused on creating a clear and recognizable
           logo through form, color and typography.
         </p>
 
-        <p class="text-neutral-700 leading-relaxed mb-4">
+        <p class="text-neutral-400 leading-relaxed mb-4">
           The logo was designed to work consistently across both digital and
           print applications.
         </p>
 
-        <p class="text-neutral-700 leading-relaxed">
+        <p class="text-neutral-400 leading-relaxed">
           Emphasis was placed on balance, readability and professional visual
           character.
         </p>
@@ -169,28 +140,27 @@
         Logo Applications
       </h2>
 
-      <!-- Hero application -->
       <div class="mb-20 animate-fadeUp">
-        <div class="overflow-hidden rounded-2xl bg-neutral-200">
+        <div class="overflow-hidden rounded-2xl bg-neutral-800">
           <img
             src="assets/images/logo-app-5.jpg"
-            alt="Primary logo application on printed material"
             class="w-full h-[520px] object-contain md:object-cover"
           />
         </div>
-        <p class="mt-4 text-sm text-neutral-500">
+        <p class="mt-4 text-sm text-neutral-400">
           Primary logo application across branded materials.
         </p>
       </div>
 
       <!-- Secondary applications -->
+      <!-- Secondary applications -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div class="animate-fadeUp">
           <img
             src="assets/images/logo-app-2.jpg"
-            class="w-full h-96 object-contain md:object-cover rounded-xl bg-neutral-200"
+            class="w-full h-96 object-contain md:object-cover rounded-xl bg-neutral-800"
           />
-          <p class="mt-3 text-sm text-neutral-500">
+          <p class="mt-3 text-sm text-white/80">
             Logo application on product packaging.
           </p>
         </div>
@@ -198,9 +168,9 @@
         <div class="animate-fadeUp" style="animation-delay: 0.05s">
           <img
             src="assets/images/logo-app-3.jpg"
-            class="w-full h-96 object-contain md:object-cover rounded-xl bg-neutral-200"
+            class="w-full h-96 object-contain md:object-cover rounded-xl bg-neutral-800"
           />
-          <p class="mt-3 text-sm text-neutral-500">
+          <p class="mt-3 text-sm text-white/80">
             Billboard design for outdoor advertising.
           </p>
         </div>
@@ -208,9 +178,9 @@
         <div class="animate-fadeUp" style="animation-delay: 0.1s">
           <img
             src="assets/images/logo-app-4.jpg"
-            class="w-full h-96 object-contain md:object-cover rounded-xl bg-neutral-200"
+            class="w-full h-96 object-contain md:object-cover rounded-xl bg-neutral-800"
           />
-          <p class="mt-3 text-sm text-neutral-500">
+          <p class="mt-3 text-sm text-white/80">
             Minimal business card design.
           </p>
         </div>
@@ -218,9 +188,9 @@
         <div class="animate-fadeUp" style="animation-delay: 0.15s">
           <img
             src="assets/images/logo-app-1.jpg"
-            class="w-full h-96 object-contain md:object-cover rounded-xl bg-neutral-200"
+            class="w-full h-96 object-contain md:object-cover rounded-xl bg-neutral-800"
           />
-          <p class="mt-3 text-sm text-neutral-500">
+          <p class="mt-3 text-sm text-white/80">
             Tote bag branding application.
           </p>
         </div>
@@ -229,42 +199,74 @@
 
     <!-- Visual Work -->
     <section class="max-w-6xl mx-auto px-6 pb-32">
-      <h2 class="text-xl font-semibold mb-16 animate-fadeIn">Visual Work</h2>
+      <h2 class="text-xl font-semibold mb-16 animate-fadeIn text-white">
+        Visual Work
+      </h2>
 
       <!-- Posters & Illustrations -->
       <div class="mb-24">
-        <h3 class="text-lg font-medium mb-8 text-neutral-700">
+        <h3 class="text-lg font-medium mb-8 text-white">
           Posters & Illustrations
         </h3>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Poster 1 -->
           <div class="animate-fadeUp">
             <img
               src="assets/images/project-1.jpg"
-              class="w-full h-80 object-contain md:object-cover rounded-xl bg-neutral-200"
+              class="w-full h-80 object-contain md:object-cover rounded-xl bg-neutral-800"
+              alt="Personalized illustration poster"
             />
-            <p class="mt-3 text-sm text-neutral-500">
+            <p class="mt-3 text-sm text-white/80">
               Personalized illustration created on request.
             </p>
           </div>
 
-          <div class="animate-fadeUp" style="animation-delay: 0.1s">
+          <!-- Poster 2 -->
+          <div class="animate-fadeUp" style="animation-delay: 0.05s">
             <img
               src="assets/images/artwork-1.jpg"
-              class="w-full h-80 object-contain md:object-cover rounded-xl bg-neutral-200"
+              class="w-full h-80 object-contain md:object-cover rounded-xl bg-neutral-800"
+              alt="Custom illustrated poster artwork"
             />
-            <p class="mt-3 text-sm text-neutral-500">
+            <p class="mt-3 text-sm text-white/80">
               Custom illustrated artwork.
             </p>
           </div>
 
-          <div class="animate-fadeUp" style="animation-delay: 0.15s">
+          <!-- Poster 3 -->
+          <div class="animate-fadeUp" style="animation-delay: 0.1s">
             <img
               src="assets/images/project-2.jpg"
-              class="w-full h-80 object-contain md:object-cover rounded-xl bg-neutral-200"
+              class="w-full h-80 object-contain md:object-cover rounded-xl bg-neutral-800"
+              alt="Digital portrait poster illustration"
             />
-            <p class="mt-3 text-sm text-neutral-500">
+            <p class="mt-3 text-sm text-white/80">
               Digital portrait illustration.
+            </p>
+          </div>
+
+          <!-- Poster 4 – Conceptual -->
+          <div class="animate-fadeUp" style="animation-delay: 0.15s">
+            <img
+              src="assets/images/poster-client.jpg"
+              alt="Conceptual poster design"
+              class="w-full h-80 md:h-[480px] lg:h-[560px] object-contain md:object-cover rounded-xl bg-neutral-800"
+            />
+            <p class="mt-3 text-sm text-white/80">
+              Conceptual poster design exploring visual storytelling.
+            </p>
+          </div>
+
+          <!-- Poster 5 – Lindemann -->
+          <div class="animate-fadeUp" style="animation-delay: 0.2s">
+            <img
+              src="assets/images/poster-lindemann.jpg"
+              class="w-full h-80 object-contain md:object-cover rounded-xl bg-neutral-800"
+              alt="Music-inspired poster illustration"
+            />
+            <p class="mt-3 text-sm text-white/80">
+              Music-inspired poster illustration.
             </p>
           </div>
         </div>
@@ -272,7 +274,7 @@
 
       <!-- Packaging & Product Design -->
       <div>
-        <h3 class="text-lg font-medium mb-8 text-neutral-700">
+        <h3 class="text-lg font-medium mb-8 text-white">
           Packaging & Product Design
         </h3>
 
@@ -280,10 +282,10 @@
         <div class="mb-16 animate-fadeUp">
           <img
             src="assets/images/packaging-1.jpg"
-            class="w-full h-[520px] object-contain md:object-cover rounded-2xl bg-neutral-200"
+            class="w-full h-[520px] object-contain md:object-cover rounded-2xl bg-neutral-800"
             alt="Product packaging design"
           />
-          <p class="mt-4 text-sm text-neutral-500">
+          <p class="mt-4 text-sm text-white/80">
             Product packaging design focused on visual identity.
           </p>
         </div>
@@ -292,10 +294,10 @@
         <div class="mb-24 animate-fadeUp" style="animation-delay: 0.05s">
           <img
             src="assets/images/energy-drink.jpg"
-            class="w-full h-[620px] object-contain md:object-cover rounded-2xl bg-neutral-200"
+            class="w-full h-[620px] object-contain md:object-cover rounded-2xl bg-neutral-800"
             alt="Energy drink can design"
           />
-          <p class="mt-4 text-sm text-neutral-500">
+          <p class="mt-4 text-sm text-white/80">
             Energy drink can design exploring bold graphics and branding.
           </p>
         </div>
@@ -306,10 +308,10 @@
           <div class="animate-fadeUp">
             <img
               src="assets/images/cereal-box.jpg"
-              class="w-full h-96 object-contain md:object-cover rounded-xl bg-neutral-200"
+              class="w-full h-96 object-contain md:object-cover rounded-xl bg-neutral-800"
               alt="Cereal box packaging design"
             />
-            <p class="mt-3 text-sm text-neutral-500">
+            <p class="mt-3 text-sm text-white/80">
               Cereal box packaging concept.
             </p>
           </div>
@@ -319,9 +321,9 @@
             <img
               src="assets/images/chocolate-packaging.jpg"
               alt="Chocolate packaging design"
-              class="w-full h-96 md:h-[520px] lg:h-[600px] object-contain md:object-cover rounded-xl bg-neutral-200"
+              class="w-full h-96 md:h-[520px] lg:h-[600px] object-contain md:object-cover rounded-xl bg-neutral-800"
             />
-            <p class="mt-3 text-sm text-neutral-500">
+            <p class="mt-3 text-sm text-white/80">
               Chocolate packaging design focused on branding and product appeal.
             </p>
           </div>
