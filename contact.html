@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Favicon -->
@@ -147,14 +147,41 @@
             @katherine.studi0
           </a>
         </div>
+
+        <!-- Facebook -->
+        <div class="flex items-center gap-3 mt-6">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-5 h-5 text-white/70"
+          >
+            <path
+              d="M13.5 9H16l-.5 3h-2v8h-3v-8H8V9h2.5V7.2C10.5 4.7 12 3 15 3h2v3h-2c-1 0-1.5.5-1.5 1.4V9z"
+            />
+          </svg>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61587165443957"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-lg font-medium text-white hover:underline underline-offset-4"
+          >
+            Katherine Studio
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="border-t border-neutral-800">
       <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-neutral-500">
-        © 2026 Katherine — Graphic Designer
+        © <span id="year"></span> Katherine — Graphic Designer
       </div>
     </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
