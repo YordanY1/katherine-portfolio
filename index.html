@@ -103,22 +103,52 @@
       class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800 z-50"
     >
       <nav
-        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+        class="max-w-6xl mx-auto px-6 py-4 md:flex md:items-center md:justify-between"
         aria-label="Main navigation"
       >
-        <a
-          href="index.html"
-          class="text-lg font-medium tracking-[0.15em] uppercase rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
-          aria-current="page"
-        >
-          Katherine
-        </a>
+        <div class="flex items-center justify-between">
+          <a
+            href="index.html"
+            class="text-lg font-medium tracking-[0.15em] uppercase rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+            aria-current="page"
+          >
+            Katherine
+          </a>
 
-        <ul class="flex gap-6 text-sm text-neutral-400">
+          <button
+            id="mobile-menu-button"
+            type="button"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+            class="inline-flex items-center justify-center rounded-sm p-2 text-neutral-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 md:hidden"
+          >
+            <span class="sr-only">Toggle navigation menu</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              class="h-6 w-6"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <ul
+          id="primary-navigation"
+          class="hidden mt-4 flex-col gap-2 border-t border-neutral-800 pt-4 text-sm text-neutral-300 md:mt-0 md:flex md:flex-row md:items-center md:justify-end md:gap-6 md:border-0 md:p-0 md:text-neutral-400"
+        >
           <li>
             <a
               href="work.html"
-              class="hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
+              class="block py-2 hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
             >
               Work
             </a>
@@ -126,7 +156,7 @@
           <li>
             <a
               href="caricatures.html"
-              class="hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
+              class="block py-2 hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
             >
               Caricatures
             </a>
@@ -134,7 +164,7 @@
           <li>
             <a
               href="about.html"
-              class="hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
+              class="block py-2 hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
             >
               About
             </a>
@@ -142,7 +172,7 @@
           <li>
             <a
               href="contact.html"
-              class="hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
+              class="block py-2 hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
             >
               Contact
             </a>
@@ -278,6 +308,27 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const primaryNavigation = document.getElementById("primary-navigation");
+
+      if (mobileMenuButton && primaryNavigation) {
+        mobileMenuButton.addEventListener("click", () => {
+          const isExpanded =
+            mobileMenuButton.getAttribute("aria-expanded") === "true";
+          mobileMenuButton.setAttribute("aria-expanded", String(!isExpanded));
+          primaryNavigation.classList.toggle("hidden");
+        });
+
+        primaryNavigation.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth < 768) {
+              primaryNavigation.classList.add("hidden");
+              mobileMenuButton.setAttribute("aria-expanded", "false");
+            }
+          });
+        });
+      }
     </script>
   </body>
 </html>
