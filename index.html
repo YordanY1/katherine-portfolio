@@ -6,24 +6,33 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <meta charset="UTF-8" />
-    <title>Katherine — Graphic Designer</title>
+    <title>Katherine | Graphic Designer & Illustrator</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Graphic designer focused on branding, visual identity and digital design."
+      content="Graphic designer focused on branding, visual identity and custom illustration work."
     />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <link rel="canonical" href="https://katherine-design.netlify.app/" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Katherine — Graphic Designer" />
+    <meta
+      property="og:title"
+      content="Katherine | Graphic Designer & Illustrator"
+    />
     <meta
       property="og:description"
-      content="Branding, visual identity and digital design."
+      content="Branding, visual identity and digital design projects by Katherine."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://katherine-design.netlify.app" />
+    <meta property="og:url" content="https://katherine-design.netlify.app/" />
+    <meta property="og:site_name" content="Katherine Design" />
     <meta
       property="og:image"
       content="https://katherine-design.netlify.app/assets/images/og-image.jpg"
@@ -31,36 +40,21 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Katherine | Graphic Designer & Illustrator"
+    />
+    <meta
+      name="twitter:description"
+      content="Branding, visual identity and digital design projects by Katherine."
+    />
+    <meta
+      name="twitter:image"
+      content="https://katherine-design.netlify.app/assets/images/og-image.jpg"
+    />
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Tailwind config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-            },
-            animation: {
-              fadeUp: "fadeUp 0.8s ease-out both",
-              fadeIn: "fadeIn 0.8s ease-out both",
-            },
-            keyframes: {
-              fadeUp: {
-                "0%": { opacity: 0, transform: "translateY(20px)" },
-                "100%": { opacity: 1, transform: "translateY(0)" },
-              },
-              fadeIn: {
-                "0%": { opacity: 0 },
-                "100%": { opacity: 1 },
-              },
-            },
-          },
-        },
-      };
-    </script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,154 +63,221 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "name": "Katerina Stoimenova",
+            "url": "https://katherine-design.netlify.app/",
+            "jobTitle": "Graphic Designer",
+            "image": "https://katherine-design.netlify.app/assets/images/katerina.jpg",
+            "sameAs": [
+              "https://www.instagram.com/katherine.studi0/?igsh=cnB2M2xjY2s4aHd6",
+              "https://www.facebook.com/profile.php?id=61587165443957"
+            ],
+            "email": "mailto:Kathedesigning@gmail.com"
+          },
+          {
+            "@type": "WebSite",
+            "name": "Katherine Design",
+            "url": "https://katherine-design.netlify.app/"
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body class="bg-neutral-950 text-white font-sans">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-neutral-900"
+    >
+      Skip to main content
+    </a>
+
     <!-- Header -->
     <header
       class="sticky top-0 bg-neutral-950/80 backdrop-blur border-b border-neutral-800 z-50"
     >
       <nav
         class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+        aria-label="Main navigation"
       >
         <a
           href="index.html"
-          class="text-lg font-medium tracking-[0.15em] uppercase"
+          class="text-lg font-medium tracking-[0.15em] uppercase rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+          aria-current="page"
         >
           Katherine
         </a>
 
         <ul class="flex gap-6 text-sm text-neutral-400">
           <li>
-            <a href="work.html" class="hover:text-white transition">Work</a>
+            <a
+              href="work.html"
+              class="hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
+            >
+              Work
+            </a>
           </li>
           <li>
-            <a href="caricatures.html" class="hover:text-white transition">
+            <a
+              href="caricatures.html"
+              class="hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
+            >
               Caricatures
             </a>
           </li>
           <li>
-            <a href="about.html" class="hover:text-white transition">About</a>
+            <a
+              href="about.html"
+              class="hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
+            >
+              About
+            </a>
           </li>
           <li>
-            <a href="contact.html" class="hover:text-white transition"
-              >Contact</a
+            <a
+              href="contact.html"
+              class="hover:text-white rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
             >
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="max-w-6xl mx-auto px-6 py-32">
-      <h1
-        class="text-4xl md:text-6xl font-bold leading-tight max-w-3xl animate-fadeUp"
-      >
-        Graphic Designer crafting clear, bold visual identities.
-      </h1>
-
-      <p
-        class="mt-6 text-lg text-neutral-400 max-w-xl animate-fadeUp"
-        style="animation-delay: 0.15s"
-      >
-        I help brands communicate through thoughtful design and strong visuals.
-      </p>
-
-      <a
-        href="caricatures.html"
-        class="inline-block mt-10 px-8 py-4 bg-white text-neutral-900 text-sm font-semibold rounded-full hover:bg-neutral-200 transition animate-fadeUp"
-      >
-        Order a Caricature
-      </a>
-    </section>
-
-    <!-- Selected Work -->
-    <section class="max-w-6xl mx-auto px-6 pb-32">
-      <h2 class="text-2xl font-semibold mb-12 animate-fadeIn">Selected Work</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Project -->
-        <div class="animate-fadeUp">
-          <div
-            class="overflow-hidden rounded-xl bg-neutral-800 flex items-center justify-center"
-          >
-            <img
-              src="assets/images/home-project-1.jpg"
-              class="w-full h-72 object-contain md:object-cover"
-              alt=""
-            />
-          </div>
-          <span class="block mt-4 font-medium">
-            Illustration & Digital Art
-          </span>
-          <span class="block text-sm text-neutral-400">Poster design</span>
-        </div>
-
-        <div class="animate-fadeUp" style="animation-delay: 0.2s">
-          <div
-            class="overflow-hidden rounded-xl bg-neutral-800 flex items-center justify-center"
-          >
-            <img
-              src="assets/images/home-project-3.jpg"
-              class="w-full h-72 object-contain md:object-cover"
-              alt=""
-            />
-          </div>
-          <span class="block mt-4 font-medium">Packaging Design</span>
-          <span class="block text-sm text-neutral-400">
-            Luxury chocolate packaging concept
-          </span>
-        </div>
-
-        <div class="animate-fadeUp" style="animation-delay: 0.1s">
-          <div
-            class="overflow-hidden rounded-xl bg-neutral-800 flex items-center justify-center"
-          >
-            <img
-              src="assets/images/home-project-2.jpg"
-              class="w-full h-72 object-contain md:object-cover"
-              alt=""
-            />
-          </div>
-          <span class="block mt-4 font-medium">Print Design</span>
-          <span class="block text-sm text-neutral-400">Business card</span>
-        </div>
-      </div>
-
-      <div class="mt-20 text-center">
-        <a
-          href="work.html"
-          class="inline-block px-8 py-4 bg-white text-neutral-900 text-sm font-semibold rounded-full hover:bg-neutral-200 transition"
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="max-w-6xl mx-auto px-6 py-32">
+        <h1
+          class="text-4xl md:text-6xl font-bold leading-tight max-w-3xl animate-fadeUp"
         >
-          View design portfolio
-        </a>
-      </div>
-    </section>
+          Graphic Designer crafting clear, bold visual identities.
+        </h1>
 
-    <!-- About -->
-    <section class="border-t border-neutral-800">
-      <div class="max-w-6xl mx-auto px-6 py-24">
-        <h2 class="text-2xl font-semibold mb-6 animate-fadeIn">About Me</h2>
-
-        <p class="text-neutral-400 max-w-xl animate-fadeUp">
-          I’m a graphic designer focused on creating meaningful and visually
-          strong design solutions.
+        <p
+          class="mt-6 text-lg text-neutral-400 max-w-xl animate-fadeUp"
+          style="animation-delay: 0.15s"
+        >
+          I help brands communicate through thoughtful design and strong visuals.
         </p>
 
         <a
-          href="about.html"
-          class="inline-block mt-6 text-sm font-semibold underline underline-offset-4 hover:text-neutral-300 transition"
+          href="caricatures.html"
+          class="inline-block mt-10 px-8 py-4 bg-white text-neutral-900 text-sm font-semibold rounded-full hover:bg-neutral-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition animate-fadeUp"
         >
-          Read more →
+          Order a Caricature
         </a>
-      </div>
-    </section>
+      </section>
+
+      <!-- Selected Work -->
+      <section class="max-w-6xl mx-auto px-6 pb-32">
+        <h2 class="text-2xl font-semibold mb-12 animate-fadeIn">Selected Work</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="animate-fadeUp">
+            <div
+              class="overflow-hidden rounded-xl bg-neutral-800 flex items-center justify-center"
+            >
+              <img
+                src="assets/images/home-project-1.jpg"
+                class="w-full h-72 object-contain md:object-cover"
+                alt="Illustration and digital poster design project."
+                loading="lazy"
+                decoding="async"
+                width="1600"
+                height="1200"
+              />
+            </div>
+            <span class="block mt-4 font-medium">
+              Illustration & Digital Art
+            </span>
+            <span class="block text-sm text-neutral-400">Poster design</span>
+          </div>
+
+          <div class="animate-fadeUp" style="animation-delay: 0.2s">
+            <div
+              class="overflow-hidden rounded-xl bg-neutral-800 flex items-center justify-center"
+            >
+              <img
+                src="assets/images/home-project-3.jpg"
+                class="w-full h-72 object-contain md:object-cover"
+                alt="Luxury chocolate packaging concept design."
+                loading="lazy"
+                decoding="async"
+                width="1600"
+                height="1067"
+              />
+            </div>
+            <span class="block mt-4 font-medium">Packaging Design</span>
+            <span class="block text-sm text-neutral-400">
+              Luxury chocolate packaging concept
+            </span>
+          </div>
+
+          <div class="animate-fadeUp" style="animation-delay: 0.1s">
+            <div
+              class="overflow-hidden rounded-xl bg-neutral-800 flex items-center justify-center"
+            >
+              <img
+                src="assets/images/home-project-2.jpg"
+                class="w-full h-72 object-contain md:object-cover"
+                alt="Minimal business card print design."
+                loading="lazy"
+                decoding="async"
+                width="1600"
+                height="1152"
+              />
+            </div>
+            <span class="block mt-4 font-medium">Print Design</span>
+            <span class="block text-sm text-neutral-400">Business card</span>
+          </div>
+        </div>
+
+        <div class="mt-20 text-center">
+          <a
+            href="work.html"
+            class="inline-block px-8 py-4 bg-white text-neutral-900 text-sm font-semibold rounded-full hover:bg-neutral-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
+          >
+            View design portfolio
+          </a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="border-t border-neutral-800">
+        <div class="max-w-6xl mx-auto px-6 py-24">
+          <h2 class="text-2xl font-semibold mb-6 animate-fadeIn">About Me</h2>
+
+          <p class="text-neutral-400 max-w-xl animate-fadeUp">
+            I'm a graphic designer focused on creating meaningful and visually
+            strong design solutions.
+          </p>
+
+          <a
+            href="about.html"
+            class="inline-block mt-6 text-sm font-semibold underline underline-offset-4 hover:text-neutral-300 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 transition"
+          >
+            Read more →
+          </a>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="border-t border-neutral-800">
       <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-neutral-500">
-        © 2026 Katherine — Graphic Designer
+        © <span id="year"></span> Katherine — Graphic Designer
       </div>
     </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
